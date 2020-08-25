@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EKeyDemo_NXY.iml" filepath="$PROJECT_DIR$/EKeyDemo_NXY.iml" group="EKeyDemo_NXY" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="EKeyDemo_NXY/app" />
+      <module fileurl="file://$PROJECT_DIR$/fingerprint/fingerprint.iml" filepath="$PROJECT_DIR$/fingerprint/fingerprint.iml" group="EKeyDemo_NXY/fingerprint" />
+      <module fileurl="file://$PROJECT_DIR$/ivcardapilibrary/ivcardapilibrary.iml" filepath="$PROJECT_DIR$/ivcardapilibrary/ivcardapilibrary.iml" group="EKeyDemo_NXY/ivcardapilibrary" />
+      <module fileurl="file://$PROJECT_DIR$/ukeySDK/ukeySDK.iml" filepath="$PROJECT_DIR$/ukeySDK/ukeySDK.iml" group="EKeyDemo_NXY/ukeySDK" />
+      <module fileurl="file://$PROJECT_DIR$/ukeyjni/ukeyjni.iml" filepath="$PROJECT_DIR$/ukeyjni/ukeyjni.iml" group="EKeyDemo_NXY/ukeyjni" />
+    </modules>
+  </component>
+</project>

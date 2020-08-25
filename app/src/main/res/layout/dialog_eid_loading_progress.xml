@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/verify_code_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.cn.froad.ekeydemo_nxy.view.FixedView
+        android:layout_width="@dimen/eid_px_130"
+        android:layout_height="@dimen/eid_px_111"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/eid_px_15"
+        android:paddingRight="@dimen/eid_px_15"
+        android:paddingTop="@dimen/eid_px_15"
+        android:paddingBottom="@dimen/eid_px_10"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/eid_bg_loading_dialog">
+
+        <ProgressBar
+            android:id="@+id/loading_iv"
+            android:layout_width="@dimen/eid_px_30"
+            android:layout_height="@dimen/eid_px_30"
+            android:layout_gravity="center_horizontal"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/eid_style_progress" />
+
+        <TextView
+            android:id="@+id/loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/eid_px_10"
+            android:textSize="@dimen/eid_px_14"
+            android:textColor="#FF942F"
+            android:text="@string/common_loading"/>
+    </com.cn.froad.ekeydemo_nxy.view.FixedView>
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:background="@android:color/transparent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_clear_cache_dialog"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/common_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="62dp"
+            android:padding="@dimen/dp20"
+            android:textColor="#272727"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/font_16sp"/>
+        <TextView
+            android:id="@+id/common_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:paddingTop="@dimen/dp10"
+            android:paddingBottom="@dimen/dp20"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:gravity="center_horizontal"
+            android:textColor="#272727"
+            android:textSize="@dimen/font_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/little_gray"/>
+
+        <LinearLayout
+            android:id="@+id/two_buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/left_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_16sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/little_gray"/>
+
+            <TextView
+                android:id="@+id/right_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#FFEF571F"
+                android:textSize="@dimen/font_16sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/one_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/alert_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#666666"
+                android:textSize="@dimen/font_16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

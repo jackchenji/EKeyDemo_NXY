@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('./debug.keystore')
+            storePassword 'android'
+        }
+        release {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('./debug.keystore')
+            storePassword 'android'
+        }
+    }
+    defaultConfig {
+        applicationId "com.cn.froad.ekeydemo_nxy"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 3
+        versionName "2.0.1"
+        buildConfigField "String","prikey",rootProject.ext.key['PRIVATE_KEY']
+
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            zipAlignEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        exclude 'proguard.cfg'
+        exclude 'proguard-project.txt'
+        exclude 'project.properties'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories{
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    //修改生成的最终文件名
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (outputFileName != null && outputFileName.endsWith('.apk')) {
+                if (variant.buildType.name.equals("release")) {
+                    // 输出apk名称为TMKey_Demo_NXY_V1.0.0_201806131746
+                    outputFileName = "TMKey_Demo_NXY_V.${defaultConfig.versionName}_${packageTime()}.apk"
+                } else {
+                }
+            }
+        }
+    }
+}
+
+def packageTime() {
+    return new Date().format("yyyyMMddHHmm")
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation 'com.yanzhenjie:permission:2.0.0-rc4'
+
+    api 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation files ("libs/ecardsdk_V2.2.3.jar")
+    api project(':fingerprint')
+
+    implementation 'com.qmuiteam:qmui:1.4.0'
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+
+    api 'com.github.zcweng:switch-button:0.0.3@aar'
+
+
+//    api project(':ivcardapilibrary')
+//    implementation files('libs/NXYBank_FFTKey_V2.1.5.jar')
+}

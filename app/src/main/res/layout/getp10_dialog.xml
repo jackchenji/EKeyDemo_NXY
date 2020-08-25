@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/getp10_dialog_view"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/alert_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="15dp"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/dialog_close_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp12"
+            android:scaleType="fitXY"
+            android:src="@drawable/item_remove"
+            />
+        <TextView
+            android:id="@+id/dialog_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:text="请选择证书类型"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#2f8586"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:background="@drawable/froad_frame"
+        >
+
+        <CheckBox
+            android:id="@+id/cert_type_rsa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CERT_TYPE_RSA" />
+
+        <LinearLayout
+            android:id="@+id/cert_type_rsa_layout"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <RadioGroup
+                    android:id="@+id/cert_type_rsa_radios"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/cert_type_rsa_sha1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SHA1"
+                        />
+                    <RadioButton
+                        android:id="@+id/cert_type_rsa_sha256"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SHA256"
+                        />
+                </RadioGroup>
+                <CheckBox
+                    android:id="@+id/cert_type_rsa_double"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RSA双证" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:background="@drawable/froad_frame"
+
+        >
+        <CheckBox
+            android:id="@+id/cert_type_sm2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CERT_TYPE_SM2" />
+        <LinearLayout
+            android:id="@+id/cert_type_sm2_layout"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+                <CheckBox
+                    android:id="@+id/cert_type_sm2_double"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SM2双证" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#c6c6c6"/>
+
+    <Button
+        android:id="@+id/hash_sure_btn"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_weight="1"
+        android:background="@drawable/froad_keyboard_ok_selector"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="#9d7d4b"
+        android:textSize="20sp"/>
+</LinearLayout>

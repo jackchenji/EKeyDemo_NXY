@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag_update_pwd_root_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    >
+    <View
+        style="@style/divide_horizontal_style">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/little_gray"
+        android:paddingLeft="@dimen/dp25"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/frag_update_pwd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dp10"
+            android:gravity="center_vertical|left"
+            android:textSize="@dimen/font_small"
+            android:textColor="@color/app_gray_color"
+            android:text="@string/frag_update_pass_reset_pass_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp25"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/oldPwd_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/oldPwd_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minWidth="64dp"
+                android:text="@string/frag_update_pass_old_pass"
+                android:textColor="@color/update_pwd_text_color"
+                android:textSize="@dimen/font_16sp" />
+
+            <EditText
+                android:id="@+id/frag_update_oldPwd_edit"
+                style="@style/common_edit_style"
+                android:layout_marginRight="@dimen/dp10"
+                android:hint="@string/frag_update_pass_new_pass_hint"
+                android:maxLength="6"
+                android:inputType="numberPassword"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/divide_horizontal_style">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:minWidth="64dp"
+                android:text="@string/frag_update_pass_new_pass"
+                android:textColor="@color/update_pwd_text_color"
+                android:textSize="@dimen/font_16sp" />
+
+            <EditText
+                android:id="@+id/frag_update_pass_new_pass"
+                style="@style/common_edit_style"
+                android:layout_marginRight="@dimen/dp10"
+                android:hint="@string/frag_update_pass_new_pass_hint"
+                android:maxLength="6"
+                android:inputType="numberPassword"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/divide_horizontal_style">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:minWidth="64dp"
+                android:text="@string/frag_update_pass_confirm_pass"
+                android:textColor="@color/update_pwd_text_color"
+                android:textSize="@dimen/font_16sp" />
+
+            <EditText
+                android:id="@+id/frag_update_pass_confirm_pass"
+                style="@style/common_edit_style"
+                android:layout_marginRight="@dimen/dp10"
+                android:hint="@string/frag_update_pass_confirm_pass_hint"
+                android:maxLength="6"
+                android:inputType="numberPassword"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/frag_update_pass_confirm_btn"
+        style="@style/common_button_style"
+        android:layout_marginLeft="@dimen/dp25"
+        android:layout_marginRight="@dimen/dp25"
+        android:layout_marginTop="@dimen/dp40"
+        android:gravity="center"
+        android:background="@drawable/bg_common_btn_selector"
+        android:text="@string/frag_update_pass_button_confirm"/>
+
+</LinearLayout>

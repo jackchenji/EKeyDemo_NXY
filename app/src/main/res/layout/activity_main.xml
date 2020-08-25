@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cn.froad.ekeydemo_nxy.MainActivity">
+
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <EditText
+                android:id="@+id/main_showResult_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:text="Hello World!" />
+            <EditText
+                android:id="@+id/input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:hint="请输入电话" />
+            <EditText
+                android:id="@+id/input_cardno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:hint="请输入卡号!" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switch_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/yangzhengmashuijishu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size_sp_18"
+                />
+        </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+                <Spinner
+                    android:id="@+id/Spinner01"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/inside_select_fun_btn_layout"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@drawable/froad_frame"
+                android:layout_marginTop="10dip"
+                android:visibility="visible"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="选择功能模块"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_sp_18"
+                    />
+                <RadioGroup
+                    android:id="@+id/main_fun_radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton android:id="@+id/main_fun_fftKey"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="薄膜盾"
+                        />
+                    <RadioButton android:id="@+id/main_fun_eCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="电子证照"/>
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/inside_btn_layout"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@drawable/froad_frame"
+                android:layout_marginTop="10dip"
+                >
+                <TextView android:id="@+id/inside_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="薄膜盾"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_sp_18"
+                    />
+                <RadioGroup
+                    android:id="@+id/main_cos_update_env_rg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    >
+                    <RadioButton
+                        android:id="@+id/main_cos_update_env_test"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="测试环境"
+                        />
+                    <RadioButton
+                        android:id="@+id/main_cos_update_env_pro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="线上环境"
+                        />
+                </RadioGroup>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    >
+                    <CheckBox
+                        android:id="@+id/main_isneed_uicc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UICC"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+                    <CheckBox
+                        android:id="@+id/main_isneed_oma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OMA"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+                    <CheckBox
+                        android:id="@+id/main_isneed_adn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ADN"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    >
+                    <CheckBox
+                        android:id="@+id/main_isneed_sdkhash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是否需要SDK做Hash"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+
+                    <CheckBox
+                        android:id="@+id/main_isneed_bip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是否使用bip通道"
+                        android:checked="true"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/cardNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:hint="请输入卡号"
+                    android:visibility="gone"
+                    android:text="" />
+
+                <EditText
+                    android:id="@+id/yangzhengma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dip"
+                    android:hint="请输入验证码"
+                    android:visibility="gone"
+                    android:text="" />
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/froad_frame"
+                    >
+                    <TextView android:id="@+id/main_base_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="基础功能模块"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+                        <Button android:id="@+id/bip_getcardno"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="bip_测试获取卡号"
+                            android:background="@drawable/bg_common_btn_selector"
+                            android:visibility="visible"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+                        <Button android:id="@+id/inside_set_cos_version_btn"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="设置可用Cos版本"
+                            android:background="@drawable/bg_common_btn_selector"
+                            android:visibility="gone"
+                            />
+                        <Button android:id="@+id/inside_check_cos_version_btn"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="检测Cos版本"
+                            android:background="@drawable/bg_common_btn_selector"
+                            android:visibility="gone"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+                        <Button android:id="@+id/bip_cosVersion"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="bip_检测cos版本"
+                            android:background="@drawable/bg_common_btn_selector"
+                            android:visibility="gone"
+                            />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                    <Button android:id="@+id/inside_hasCard_btn"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="hasCard"
+                        android:visibility="visible"
+                        android:background="@drawable/bg_common_btn_selector"
+                        />
+                    <Button android:id="@+id/inside_popStk_btn"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="isPopStk"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/inside_getSDKVer_btn"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="SDK Version"
+                        android:background="@drawable/bg_common_btn_selector"
+                        />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                    <Button android:id="@+id/inside_getRSA2048Cer_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="RSA2048 Cer"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/inside_changepin_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="CHANGE PIN"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="visible"
+                        />
+                    <Button android:id="@+id/inside_resetpin_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="RESET PIN"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="visible"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                    <Button android:id="@+id/inside_getErrorCode_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="GET ERROR CODE"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/inside_sign_RSA_1024_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="SIGN_RSA_1024"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/inside_sign_RSA_2048_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="SIGN_RSA_2048"
+                        android:background="@drawable/bg_common_btn_selector"
+                        />
+                    <Button android:id="@+id/inside_sign_SM2_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="SIGN_SM2"
+                        android:background="@drawable/bg_common_btn_selector"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        >
+
+                    <Button android:id="@+id/btn_support_fingerprint"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="是否支持指纹"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/btn_get_random_number"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="获取随机数"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/btn_sign"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="签名认证"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/btn_setup_public_key_sm2"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="设置sm2公钥"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/btn_setup_public_key_rsa1024"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="设置rsa1024公钥"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    <Button android:id="@+id/btn_setup_public_key_rsa2048"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="设置rsa2048公钥"
+                        android:background="@drawable/bg_common_btn_selector"
+                        android:visibility="gone"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        >
+                    <Button android:id="@+id/inside_writeHashCode_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="更新HashCode"
+                        android:background="@drawable/bg_common_btn_selector"
+                        />
+                    <Button android:id="@+id/inside_readHashCode_btn"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="10dip"
+                        android:layout_marginLeft="8dip"
+                        android:layout_gravity="center_horizontal"
+                        android:text="读取HashCode"
+                        android:background="@drawable/bg_common_btn_selector"
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dip"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/froad_frame"
+                    android:visibility="visible"
+                    >
+                    <TextView android:id="@+id/main_cert_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="证书更新模块"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <Button android:id="@+id/init_card"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Init Card"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/create_key_pair"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Create Key Pair"
+                            android:background="@drawable/bg_common_btn_selector"
+                            android:visibility="gone"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <Button android:id="@+id/create_p10"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Create P10"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/create_cert"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Create Cert"
+                            android:background="@drawable/bg_common_btn_selector"
+                            android:visibility="gone"
+                            />
+                        <Button android:id="@+id/write_cert"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Write Cert"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inside_ecard_btn_layout"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@drawable/froad_frame"
+                android:layout_marginTop="10dip"
+                android:visibility="visible"
+                >
+                <TextView android:id="@+id/inside_ecard_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="电子证照"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_size_sp_18"
+                    />
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    >
+                    <CheckBox
+                        android:id="@+id/main_isneed_ecard_uicc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UICC"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+                    <CheckBox
+                        android:id="@+id/main_isneed_ecard_oma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OMA"
+                        android:layout_weight="1"
+                        >
+                    </CheckBox>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/froad_frame"
+                    >
+                    <TextView android:id="@+id/main_base_ecard_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="基础功能模块"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <Button android:id="@+id/main_check_ecard_channel"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="check Channel"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <Button android:id="@+id/main_read_ecard_id_carrier"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Get ID Carrier"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/main_verify_ecard_pin"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Verify PIN"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/main_change_ecard_pin"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Change PIN"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/froad_frame"
+                    android:visibility="gone"
+                    >
+                    <TextView android:id="@+id/main_write_ecard_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="开通电子证照模块"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <Button android:id="@+id/main_init_ecard"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Init eCard"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/main_write_ecard"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Write eCard"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="20dip"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/froad_frame"
+                    >
+                    <TextView android:id="@+id/main_read_ecard_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="读电子证照模块"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <Button android:id="@+id/main_check_ecard"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Check ECARD"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/main_read_ecard_pwd_info"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Read ECard Pwd"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                        <Button android:id="@+id/main_open_read_ecard_channel"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="10dip"
+                            android:layout_marginLeft="8dip"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Open Read ECard"
+                            android:background="@drawable/bg_common_btn_selector"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/inside_input_layout"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:background="@drawable/froad_frame"
+                android:layout_marginTop="10dip"
+                >
+                <TextView
+                    android:id="@+id/main_input_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="请输入"
+                    />
+                <EditText
+                    android:id="@+id/main_input_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="请输入签名内容"
+                    android:background="@drawable/froad_frame"
+                    >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

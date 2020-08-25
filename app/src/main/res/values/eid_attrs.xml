@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- Header view -->
+<declare-styleable name="header">
+    <attr name="titleText" format="string|dimension" />
+    <attr name="titleTextSize" format="float" />
+    <attr name="startAlpha" format="float" />
+    <attr name="titleIcon" format="reference" />
+    <attr name="leftIcon" format="reference" />
+    <attr name="leftIconBkg" format="reference" />
+    <attr name="leftText" format="string|reference" />
+    <attr name="rightIcon" format="reference" />
+    <attr name="rightIconBkg" format="reference" />
+    <attr name="rightText" format="string|reference" />
+    <attr name="rightSecondIcon" format="reference" />
+    <attr name="rightSecondIconBkg" format="reference" />
+    <attr name="titleIconRight" format="reference" />
+    <attr name="color_style" format="integer" />
+</declare-styleable>
+
+    <!-- progress layout -->
+    <declare-styleable name="progressView">
+        <attr name="selectIndex" format="integer" />
+    </declare-styleable>
+    <!-- progressLine -->
+    <declare-styleable name="progressLine">
+        <attr name="progress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="fixed_size">
+        <attr name="android:layout_width"/>
+        <attr name="android:layout_height"/>
+    </declare-styleable>
+</resources>

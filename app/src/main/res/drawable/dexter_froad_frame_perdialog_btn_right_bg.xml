@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <item>
+                <!-- 渐变效果
+                <gradient
+                    android:startColor="@color/white"
+                    android:endColor="@color/white"
+                    android:angle="270"
+                    />-->
+                <shape>
+                    <solid android:color="@color/white" />
+                    <corners android:bottomRightRadius="8dp" />
+                </shape>
+            </item>
+
+            <item
+                android:right="-2dp"
+                android:bottom="-2dp"
+                >
+                <shape>
+                    <solid android:color="@android:color/transparent"/>
+                    <corners android:bottomRightRadius="0dp" />
+                    <stroke
+                        android:width="1dp"
+                        android:color="@color/dexter_froad_frame_btn_bg"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 点击效果
+    <item android:state_pressed="true">
+        <shape>
+
+            <solid android:color="@color/font_green" />
+
+            <corners android:bottomLeftRadius="8dip" />
+
+        </shape>
+    </item>-->
+
+</selector>
+
+

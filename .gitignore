@@ -1,0 +1,8 @@
+# Project exclude paths
+/.gradle/
+/ukeyjni/.cxx/
+/ukeyjni/.externalNativeBuild/
+/ukeyjni/build/
+/ukeyjni/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/
+/ukeySDK/build/
+/ukeySDK/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/

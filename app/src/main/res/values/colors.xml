@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="light_blue">#5CACEE</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#7F7F7F</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="froad_white">#ffffffff</color>
+    <color name="froad_frame_background">#fefbfb</color>
+    <color name="froad_frame_stoken">#cfcfcf</color>
+
+    <color name="dexter_froad_frame_btn_bg">#48ADCB</color>
+    <color name="common_disable_btn_color">#FFD7D7D7</color>
+    <color name="common_bg_start_color">#FFFF511A</color>
+    <color name="common_bg_end_color">#FFFF942F</color>
+
+    <color name="keyboard_key_normal_color">#fcfcfc</color>
+    <color name="keyboard_key_selected_color">#b8bcc0</color>
+    <color name="keyboard_opkey_selected_color">#cbcfd5</color>
+    <color name="keyboard_bg_color">#acb3b6</color>
+
+    <color name="background">#eff3f9</color>
+    <color name="little_gray">#f2f2f2</color>
+    <color name="app_gray_color">#666</color>
+    <color name="update_pwd_text_color">#FF272727</color>
+    <color name="app_text_hint_color">#d2d2d2</color>
+    <color name="dark_black">#333</color>
+
+    <color name="translucent">#D9FFFFFF</color>
+
+    <color name="white_line_color">#ffeeeeee</color>
+    <color name="eid_common_btn_bg_color">#ffef571f</color>
+    <color name="eid_common_btn_bg_color_un">#ffbcbcbc</color>
+</resources>

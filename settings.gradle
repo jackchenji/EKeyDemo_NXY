@@ -1,0 +1,1 @@
+include ':app', ':ukeySDK', ':ukeyjni', ':ivcardapilibrary', ':fingerprint'

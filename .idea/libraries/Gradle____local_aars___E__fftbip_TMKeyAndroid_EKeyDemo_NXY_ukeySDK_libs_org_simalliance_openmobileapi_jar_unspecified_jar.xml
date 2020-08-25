@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_aars__:E./fftbip/TMKeyAndroid/EKeyDemo_NXY/ukeySDK/libs/org.simalliance.openmobileapi.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ukeySDK/libs/org.simalliance.openmobileapi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TransparentDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+    </style>
+
+    <style name="PopWindow_title_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/dp8</item>
+        <item name="android:paddingBottom">@dimen/dp8</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="edit_identity_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/eid_px_50</item>
+        <item name="android:layout_marginStart">@dimen/eid_px_20</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="common_tv_style">
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">@dimen/eid_px_16</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_4</item>
+        <!--<item name="android:textSize">@dimen/eid_px_14</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_20</item>-->
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="common_tv_small_style">
+        <item name="android:textColor">#ff999999</item>
+        <item name="android:textSize">@dimen/eid_px_14</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_8</item>
+        <!--<item name="android:textSize">@dimen/eid_px_14</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_20</item>-->
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="common_tv_bold_style">
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">@dimen/eid_px_18</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_12</item>
+        <!--<item name="android:textSize">@dimen/eid_px_16</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_23</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+    <style name="common_tv_large_style">
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">@dimen/eid_px_15</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_12</item>
+        <!--<item name="android:textSize">@dimen/eid_px_16</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_23</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
+    <style name="common_btn_style_enabled">
+        <item name="android:background">@drawable/eid_common_btn_bg</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">@dimen/eid_px_18</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_12</item>
+        <!--<item name="android:textSize">@dimen/eid_px_16</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_23</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="common_btn_style_">
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:textSize">@dimen/eid_px_18</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_10</item>
+        <item name="android:gravity">center</item>
+        <!--<item name="android:textSize">@dimen/eid_px_16</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_20</item>-->
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="common_btn_style_selector">
+        <item name="android:background">@drawable/eid_common_btn_bg_selector</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textSize">@dimen/eid_px_18</item>
+        <item name="android:lineSpacingExtra">@dimen/eid_px_12</item>
+        <!--<item name="android:textSize">@dimen/eid_px_16</item>-->
+        <!--<item name="android:lineSpacingExtra">@dimen/eid_px_23</item>-->
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+</resources>

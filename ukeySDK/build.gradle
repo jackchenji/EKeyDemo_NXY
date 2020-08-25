@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories{
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compileOnly files('libs/org.simalliance.openmobileapi.jar')
+    compileOnly files('libs/bc.jar')
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    api project(':ukeyjni')
+    api project(':ivcardapilibrary')
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    api 'io.reactivex.rxjava2:rxjava:2.2.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+}
+
+def jarPath = 'build/libs/NXYBank_FFTKey_V2.1.5.jar'
+task makeTMNXYJar(type: proguard.gradle.ProGuardTask, dependsOn: "build") {
+    //删除之前编译混淆jar包
+    delete jarPath
+    // 未混淆的jar，不同gradle版本目录不一样
+    injars 'build/intermediates/intermediate-jars/release/classes.jar'
+    // 混淆后的jar路径
+    outjars jarPath
+    // 混淆文件
+    configuration 'proguard-rules.pro'
+}

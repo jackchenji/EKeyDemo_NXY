@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">EKeyDemo_NXY</string>
+    <string name="app_ok">确定</string>
+    <string name="app_cancel">取消</string>
+    <string name="waitting">正在与卡片通信，请稍候...</string>
+
+    <string name="app_confirm">确定</string>
+    <string name="app_retry">重试</string>
+    <string name="common_net_error_new">网络连接失败，请重试！</string>
+    <string name="frag_update_pass_reset_pass_title">设置新登录密码</string>
+    <string name="frag_update_pass_old_pass">旧密码</string>
+    <string name="frag_update_pass_new_pass">新密码</string>
+    <string name="frag_update_pass_new_pass_hint">请输入6位数字密码</string>
+    <string name="frag_update_pass_confirm_pass">确认密码</string>
+    <string name="frag_update_pass_confirm_pass_hint">请再次输入密码</string>
+    <string name="frag_update_pass_button_confirm">确认修改</string>
+    <string name="common_loading">正在加载...</string>
+
+    <!-- 权限请求 -->
+    <string name="dexter_permission_refuse_str">拒绝</string>
+    <string name="dexter_permission_agree_str">同意</string>
+
+    <string name="permission_rationale_settings_button_text">设置</string>
+    <string name="permission_button_cancel">取消</string>
+    <string name="permission_denied_dialog_setmethod">设置路径：设置->应用->%1$s->权限</string>
+    <string name="permission_rationale_contact_title">应用需要读/写联系人</string>
+    <string name="permission_rationale_contact_message">我们需要读/写联系人，用于应用正常执行操作</string>
+    <string name="contact_permission_denied_dialog_title">读/写联系人</string>
+    <string name="contact_permission_denied_dialog_msg">我们需要读/写联系人，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_phone_title">应用需要读取手机信息</string>
+    <string name="permission_rationale_phone_message">我们需要读取手机信息，用于应用正常执行操作</string>
+    <string name="phone_permission_denied_dialog_title">需要读取手机信息</string>
+    <string name="phone_permission_denied_dialog_msg">我们需要读取手机信息，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_calendar_title">应用需要读取日历信息</string>
+    <string name="permission_rationale_calendar_message">我们需要读取日历信息，用于应用正常执行操作</string>
+    <string name="calendar_permission_denied_dialog_title">需要读取日历信息</string>
+    <string name="calendar_permission_denied_dialog_msg">我们需要读取日历信息，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_camera_title">应用需要使用照相机</string>
+    <string name="permission_rationale_camera_message">我们需要使用照相机，用于应用正常执行操作</string>
+    <string name="camera_permission_denied_dialog_title">需要使用照相机</string>
+    <string name="camera_permission_denied_dialog_msg">我们需要使用照相机，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_sensors_title">应用需要使用传感器</string>
+    <string name="permission_rationale_sensors_message">我们需要使用传感器，用于应用正常执行操作</string>
+    <string name="sensors_permission_denied_dialog_title">需要使用传感器</string>
+    <string name="sensors_permission_denied_dialog_msg">我们需要使用传感器，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_location_title">应用需要使用位置定位</string>
+    <string name="common_location_permission_tip_deny_message">定位服务未开启，打开定位服务允许应用确定您的位置</string>
+    <string name="permission_rationale_location_message">我们需要使用位置定位，用于应用正常执行操作</string>
+    <string name="location_permission_denied_dialog_title">需要使用位置定位</string>
+    <string name="location_permission_denied_dialog_msg">我们需要使用位置定位，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_storage_title">应用需要使用SD卡存储</string>
+    <string name="permission_rationale_storage_message">我们需要使用SD卡存储，用于应用正常执行操作</string>
+    <string name="storage_permission_denied_dialog_title">需要使用SD卡存储</string>
+    <string name="storage_permission_denied_dialog_msg">我们需要使用SD卡存储，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_microphone_title">应用需要使用麦克风</string>
+    <string name="permission_rationale_microphone_message">我们需要使用麦克风，用于应用正常执行操作</string>
+    <string name="microphone_permission_denied_dialog_title">需要使用麦克风</string>
+    <string name="microphone_permission_denied_dialog_msg">我们需要使用麦克风，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+    <string name="permission_rationale_sms_title">应用需要读/写短信</string>
+    <string name="permission_rationale_sms_message">我们需要读/写短信，用于应用正常执行操作</string>
+    <string name="sms_permission_denied_dialog_title">需要读/写短信</string>
+    <string name="sms_permission_denied_dialog_msg">我们需要读/写短信，用于应用正常执行操作，否则，将无法正常使用%1$s</string>
+</resources>
